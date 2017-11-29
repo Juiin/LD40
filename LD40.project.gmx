@@ -5,14 +5,39 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites">
-    <sprite>sprites\spr_vmsprite</sprite>
-  </sprites>
+  <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <objects name="objects">
-    <object>objects\object0</object>
-  </objects>
+  <scripts name="scripts">
+    <scripts name="Utility">
+      <script>scripts\scr_range_convert.gml</script>
+      <script>scripts\scr_chance.gml</script>
+      <script>scripts\scr_pos_inside.gml</script>
+      <script>scripts\scr_text_outlined_scaled.gml</script>
+      <script>scripts\scr_wave.gml</script>
+    </scripts>
+    <scripts name="StateMachine">
+      <scripts name="MustHave">
+        <scripts name="Create">
+          <script>scripts\state_machine_init.gml</script>
+          <script>scripts\state_start.gml</script>
+          <script>scripts\state_create.gml</script>
+        </scripts>
+        <scripts name="Step">
+          <script>scripts\state_execute.gml</script>
+        </scripts>
+        <scripts name="EndStep">
+          <script>scripts\state_update.gml</script>
+        </scripts>
+        <scripts name="Destroy">
+          <script>scripts\state_cleanup.gml</script>
+        </scripts>
+      </scripts>
+      <script>scripts\state_switch.gml</script>
+      <script>scripts\state_switch_previous.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects"/>
   <help>
     <rtf>help.rtf</rtf>
   </help>
