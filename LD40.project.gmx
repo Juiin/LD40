@@ -36,7 +36,7 @@
       <script>scripts\state_switch.gml</script>
       <script>scripts\state_switch_previous.gml</script>
     </scripts>
-    <script>scripts\script13.gml</script>
+    <script>scripts\scr_devica.gml</script>
   </scripts>
   <help>
     <rtf>help.rtf</rtf>
