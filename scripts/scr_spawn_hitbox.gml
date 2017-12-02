@@ -1,0 +1,23 @@
+///scr_spawn_hitbox(x,y,duration,sprite,damage,target,follow,follow_id,knockback?,kb_dir,kb_spd);
+var xx = argument0;
+var yy = argument1;
+var duration = argument2;
+var sprite = argument3;
+var damage = argument4;
+var target = argument5;
+var follow = argument6;
+var follow_id = argument7;
+var knockback = argument8;
+var knockback_dir = argument9;
+var knockback_spd = argument10;
+
+inst = instance_create(xx,yy,obj_hitbox_parent);
+inst.duration = duration;
+inst.sprite_index = sprite;
+inst.damage = damage;
+inst.target = target;
+inst.follow = follow;
+inst.follow_id = follow_id;
+inst.knockback = knockback;
+inst.knockback_dir = knockback_dir;
+inst.knockback_spd = knockback_spd;

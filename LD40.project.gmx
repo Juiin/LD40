@@ -5,7 +5,15 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_skillbar</sprite>
+    <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\spr_global_cooldown</sprite>
+    <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_1_hitbox</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -15,6 +23,10 @@
       <script>scripts\scr_pos_inside.gml</script>
       <script>scripts\scr_text_outlined_scaled.gml</script>
       <script>scripts\scr_wave.gml</script>
+      <script>scripts\scr_collision_line_ext.gml</script>
+      <script>scripts\scr_spawn_hitbox.gml</script>
+      <script>scripts\scr_damage_self.gml</script>
+      <script>scripts\scr_apply_knockback.gml</script>
     </scripts>
     <scripts name="StateMachine">
       <scripts name="MustHave">
@@ -36,8 +48,67 @@
       <script>scripts\state_switch.gml</script>
       <script>scripts\state_switch_previous.gml</script>
     </scripts>
-    <script>scripts\scr_devica.gml</script>
+    <scripts name="Player">
+      <script>scripts\scr_skill_inputs.gml</script>
+      <script>scripts\scr_skills.gml</script>
+      <scripts name="Movement">
+        <script>scripts\movement_and_collision.gml</script>
+        <script>scripts\wall_escape.gml</script>
+      </scripts>
+      <scripts name="States">
+        <script>scripts\st_player_stand.gml</script>
+        <script>scripts\st_player_walk.gml</script>
+        <script>scripts\st_player_knockback.gml</script>
+        <script>scripts\st_player_cutscene.gml</script>
+      </scripts>
+      <script>scripts\scr_cooldown.gml</script>
+    </scripts>
+    <scripts name="Camera">
+      <script>scripts\st_camera_loose_player.gml</script>
+      <script>scripts\st_camera_fixed_player.gml</script>
+    </scripts>
+    <script>scripts\scr_damage_other.gml</script>
+    <scripts name="Enemy">
+      <scripts name="States">
+        <script>scripts\st_enemy_idle.gml</script>
+        <script>scripts\st_enemy_roam.gml</script>
+        <script>scripts\st_enemy_chase.gml</script>
+        <script>scripts\st_enemy_death.gml</script>
+        <script>scripts\st_enemy_attack.gml</script>
+        <script>scripts\st_enemy_knockback.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_peralta_0_75</font>
+    <font>fonts\fnt_peralta_1_5</font>
+    <font>fonts\fnt_peralta_3_0</font>
+    <font>fonts\fnt_peralta</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+    <object>objects\obj_controller</object>
+    <objects name="Parents">
+      <object>objects\obj_solid</object>
+      <object>objects\obj_enemy_parent</object>
+      <object>objects\obj_hitbox_parent</object>
+    </objects>
+    <objects name="Effects">
+      <object>objects\obj_red_flash</object>
+    </objects>
+    <object>objects\obj_camera</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_cooldown</object>
+    <object>objects\obj_hud</object>
+    <object>objects\obj_arrow</object>
+    <object>objects\obj_floaty_damage</object>
+    <object>objects\obj_enemy_1</object>
+    <object>objects\obj_enemy_dead</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_init</room>
+    <room>rooms\rm_one</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
