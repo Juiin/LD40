@@ -13,6 +13,7 @@
     <sprite>sprites\spr_global_cooldown</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_enemy_1_hitbox</sprite>
+    <sprite>sprites\spr_vase</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -78,6 +79,11 @@
         <script>scripts\st_enemy_knockback.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\scr_gen.gml</script>
+    <script>scripts\scr_floor_tile_amount_region.gml</script>
+    <script>scripts\scr_nearby_value.gml</script>
+    <script>scripts\draw_path_all.gml</script>
+    <script>scripts\scr_toggle_next.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_peralta_0_75</font>
@@ -97,10 +103,13 @@
       <object>objects\obj_red_flash</object>
     </objects>
     <object>objects\obj_camera</object>
+    <object>objects\obj_mini_map</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_cooldown</object>
+    <object>objects\obj_generator</object>
     <object>objects\obj_hud</object>
     <object>objects\obj_arrow</object>
+    <object>objects\obj_vase</object>
     <object>objects\obj_floaty_damage</object>
     <object>objects\obj_enemy_1</object>
     <object>objects\obj_enemy_dead</object>
@@ -108,6 +117,7 @@
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_one</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

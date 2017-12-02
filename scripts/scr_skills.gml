@@ -18,6 +18,7 @@ scr_skill_inputs();
             fb.direction = dir_start+ (spacing*i) mod 360;
             fb.proj_id = proj_id;
             fb.image_angle = dir_start + (spacing*i) mod 360;
+            fb.damage = arrow_damage;
             if(scr_chance(pierce_chance)) fb.pierce = true;
         }
         proj_id++;

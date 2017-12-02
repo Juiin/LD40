@@ -48,13 +48,9 @@ else if (prev_los) //if we had los last frame
     mp_potential_step_object(wp_x[| to_wp], wp_y[| to_wp], total_move_speed, obj_wall)
     
 }
-
+*/
 if (distance_to_object(target) < 2)
 {
-    ds_list_destroy(wp_x);
-    ds_list_destroy(wp_y);
-    wp_x = ds_list_create();
-    wp_y = ds_list_create();
     state_switch("Attack");
 }
 

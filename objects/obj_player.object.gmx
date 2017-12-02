@@ -29,6 +29,7 @@
 mov_dir=-1;
 knockback_dir=-1;
 knockback_spd=1;
+knockback_duration = room_speed/2;
 scr_skill_inputs();
 angle = -1;
 left_cd = noone;
@@ -37,10 +38,14 @@ two_cd = noone;
 three_cd = noone;
 four_cd = noone;
 
+total_health = 10;
+hp = total_health;
+
 total_move_speed = 6;
 proj_id = 0;
 projectiles = 3;
 pierce_chance = 0.5 //0-1
+arrow_damage = 1;
 </string>
           </argument>
         </arguments>
@@ -185,6 +190,28 @@ state_execute();
             <kind>1</kind>
             <string>///Rotate
 angle = point_direction(x,y,mouse_x,mouse_y);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Range Convert
+hp_convert = scr_range_convert(0,total_health,0,100,hp);
 </string>
           </argument>
         </arguments>
