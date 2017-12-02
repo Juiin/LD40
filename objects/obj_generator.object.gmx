@@ -311,10 +311,10 @@ for(var i=1;i&lt;grid_width-1;i++)
 }
 //Create Player
 //scr_create_player(player_x*CELL_WIDTH+16,player_y*CELL_HEIGHT+16);
-if(instance_exists(obj_player_parent))
+if(instance_exists(obj_player))
 {
-    obj_player_parent.x = player_x*CELL_WIDTH+24;
-    obj_player_parent.y = player_y*CELL_HEIGHT+24;
+    obj_player.x = player_x*CELL_WIDTH+24;
+    obj_player.y = player_y*CELL_HEIGHT+24;
 }
 
 
@@ -329,7 +329,7 @@ for(var i=1;i&lt;grid_width-1;i++)
         if(grid[# i,j] == FLOOR)
         {
             
-            if(mp_grid_path(mp_grid,path,obj_player_parent.x,obj_player_parent.y,i*CELL_WIDTH,j*CELL_HEIGHT,true))
+            if(mp_grid_path(mp_grid,path,obj_player.x,obj_player.y,i*CELL_WIDTH,j*CELL_HEIGHT,true))
             {
                 len = path_get_length(path);
                 if(len &gt; max_len)
@@ -348,7 +348,7 @@ for(var i=1;i&lt;grid_width-1;i++)
 grid[# exit_x,exit_y] = EXIT;
 tile_add(bg_exit,0,0,CELL_WIDTH,CELL_HEIGHT,exit_x*CELL_WIDTH,exit_y*CELL_HEIGHT,0);
 var inst = instance_create(exit_x*CELL_WIDTH,exit_y*CELL_HEIGHT,obj_warp);
-inst.destination = rm_overworld;
+inst.destination = rm_generated;
 
 //Spawn Enemies
 for(var i=1;i&lt;grid_width-1;i++)
@@ -357,7 +357,7 @@ for(var i=1;i&lt;grid_width-1;i++)
     {
         if(grid[# i,j] == FLOOR)
         {
-            if (mp_grid_path(mp_grid,path,obj_player_parent.x,obj_player_parent.y,i*CELL_WIDTH,j*CELL_WIDTH,true))
+            if (mp_grid_path(mp_grid,path,obj_player.x,obj_player.y,i*CELL_WIDTH,j*CELL_WIDTH,true))
             {  
             
                 len = path_get_length(path);
@@ -365,7 +365,7 @@ for(var i=1;i&lt;grid_width-1;i++)
                 {
                     if(random(1) &lt; 0.1)
                     {
-                        instance_create(i*CELL_WIDTH+24,j*CELL_HEIGHT+24,choose(obj_enemy_caster,obj_enemy_charger,obj_enemy_melee_1));
+                        instance_create(i*CELL_WIDTH+24,j*CELL_HEIGHT+24,obj_enemy_1);
                     }
                     
                 }
@@ -376,20 +376,7 @@ for(var i=1;i&lt;grid_width-1;i++)
     }
 }
 //Spawn Deco
-//Torches
-for(var i=1;i&lt;grid_width-1;i++)
-{
-    for(var j=1;j&lt;grid_height-1;j++)
-    {
-        if(grid[# i ,j] == WALL)
-        {
-            if(grid[# i,j+1] == FLOOR &amp;&amp; scr_chance(0.5))
-            {
-                instance_create(i*CELL_WIDTH+(CELL_WIDTH/2) ,j*CELL_HEIGHT+(CELL_HEIGHT/2),obj_torch); 
-            }
-        }    
-    }
-}
+
 //Grass
 /*
 for(var i=1;i&lt;grid_width-1;i++)
@@ -413,25 +400,7 @@ for(var i=1;i&lt;grid_width-1;i++)
     }
 }
 */
-//Stones
-for(var i=1;i&lt;grid_width-1;i++)
-{
-    for(var j=1;j&lt;grid_height-1;j++)
-    {
-        if(grid[# i ,j] == FLOOR)
-        {
-            if(scr_chance(0.5))
-            {
-                var inst = instance_create(i*CELL_WIDTH,j*CELL_HEIGHT,obj_stone);
-                inst.image_blend = scr_gen(global.area,"rock_blend");
-                
-                inst.x = irandom_range(inst.x+(sprite_get_width(inst.sprite_index)),inst.x+CELL_WIDTH-(sprite_get_width(inst.sprite_index)));
-                inst.y = irandom_range(inst.y+(sprite_get_height(inst.sprite_index)),inst.y+CELL_HEIGHT-(sprite_get_height(inst.sprite_index)));    
-                
-            }
-        }    
-    }
-}
+
 //Vases 
 for(var i=1;i&lt;grid_width-1;i++)
 {
