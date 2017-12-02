@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,14 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Init
-randomize();
-global.area = "Normal";
-global.debug = false;
+            <string>for(var i=0;i&lt;3;i++)
+{
+    bar_amount[i] = 0;
+    bar_decay[i] = true;
+    bar_lower_threshold[i] = 10;
+    bar_upper_threshold[i] = 90;
+    bar_decay_rate[i] = 0.1; //per second
+}
+
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,8 +56,34 @@ global.debug = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///room_goto_next
-room_goto_next();
+            <string>for(var i=0;i&lt;3;i++)
+{
+    if(bar_decay[i])
+    {
+        bar_amount[i]-=bar_decay_rate[i]/room_speed;
+    }
+}
+
+
+//DoT if 0 
+for(var i=0;i&lt;3;i++)
+{
+    if(bar_amount[i] &lt;= 0)
+    {
+        if(instance_exists(obj_player))
+        {   
+            var amount = obj_player.total_health/10;
+            obj_player.hp -= amount
+            inst = instance_create(other.x,other.y,obj_floaty_damage);
+            inst.text = string(-amount);
+            inst.out_col = c_black;
+            inst.in_col = c_white;
+        }
+        
+    }
+    
+}
+
 </string>
           </argument>
         </arguments>
@@ -73,32 +106,29 @@ room_goto_next();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set Font
-draw_set_font(fnt_peralta_1_5);
+            <string>///HP Bar
+if(instance_exists(obj_player))
+{
+    draw_set_halign(fa_left);
+    scr_text_outlined_scaled(view_xview[view_current]+16,view_yview[view_current],"Alcohol",c_white,c_black,1,1);
+    draw_healthbar(view_xview[view_current]+32,view_yview[view_current]+32,view_xview[view_current]+64+32,view_yview[view_current]+128+32,bar_amount[0],c_black,c_green,c_red,3,true,true);
+    draw_set_halign(fa_center);
+    scr_text_outlined_scaled(view_xview[view_current]+16+48,view_yview[view_current]+128+32,bar_amount[0],c_white,c_black,1,1);
+    
+    draw_set_halign(fa_left);
+    scr_text_outlined_scaled(view_xview[view_current]+16+128,view_yview[view_current],"XTC",c_white,c_black,1,1);
+    draw_healthbar(view_xview[view_current]+32+128,view_yview[view_current]+32,view_xview[view_current]+64+32+128,view_yview[view_current]+128+32,bar_amount[1],c_black,c_green,c_red,3,true,true);
+    draw_set_halign(fa_center);
+    scr_text_outlined_scaled(view_xview[view_current]+16+48+128,view_yview[view_current]+128+32,bar_amount[1],c_white,c_black,1,1);
+    
+    draw_set_halign(fa_left);
+    scr_text_outlined_scaled(view_xview[view_current]+16+128+128,view_yview[view_current],"Speed",c_white,c_black,1,1);
+    draw_healthbar(view_xview[view_current]+32+128+128,view_yview[view_current]+32,view_xview[view_current]+64+32+128+128,view_yview[view_current]+128+32,bar_amount[2],c_black,c_green,c_red,3,true,true);
+    draw_set_halign(fa_center);
+    scr_text_outlined_scaled(view_xview[view_current]+16+48+128+128,view_yview[view_current]+128+32,bar_amount[2],c_white,c_black,1,1);
+}
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="49">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>obj_bars.bar_amount[0]++;
+
 </string>
           </argument>
         </arguments>
