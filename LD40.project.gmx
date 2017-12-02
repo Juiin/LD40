@@ -22,7 +22,6 @@
       <sprite>sprites\spr_border_map</sprite>
       <sprite>sprites\spr_floor_map</sprite>
     </sprites>
-<<<<<<< HEAD
     <sprite>sprites\TheHero</sprite>
     <sprites name="Cleave">
       <sprite>sprites\CleaveUP</sprite>
@@ -30,13 +29,6 @@
       <sprite>sprites\CleaveLEFT</sprite>
       <sprite>sprites\CleaveRIGHT</sprite>
     </sprites>
-=======
-    <sprite>sprites\spr_hero_back</sprite>
-    <sprite>sprites\sprite15</sprite>
-    <sprite>sprites\spr_hero_front</sprite>
-    <sprite>sprites\spr_hero_left</sprite>
-    <sprite>sprites\spr_hero_right</sprite>
->>>>>>> 9e9c13de33faa090dfc4b03a4eac6fbd790f27a9
   </sprites>
   <backgrounds name="background">
     <background>background\bg_void</background>
@@ -148,7 +140,6 @@
     <object>objects\obj_floaty_damage</object>
     <object>objects\obj_enemy_1</object>
     <object>objects\obj_enemy_dead</object>
-    <object>objects\obj_bars</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
