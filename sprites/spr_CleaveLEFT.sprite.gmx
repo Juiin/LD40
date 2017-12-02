@@ -20,8 +20,8 @@
   <width>48</width>
   <height>48</height>
   <frames>
-    <frame index="0">images\CleaveLEFT_0.png</frame>
-    <frame index="1">images\CleaveLEFT_1.png</frame>
-    <frame index="2">images\CleaveLEFT_2.png</frame>
+    <frame index="0">images\spr_CleaveLEFT_0.png</frame>
+    <frame index="1">images\spr_CleaveLEFT_1.png</frame>
+    <frame index="2">images\spr_CleaveLEFT_2.png</frame>
   </frames>
 </sprite>

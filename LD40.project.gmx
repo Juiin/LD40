@@ -27,10 +27,13 @@
       <sprite>sprites\spr_hero_right</sprite>
       <sprite>sprites\spr_hero_back</sprite>
       <sprite>sprites\spr_hero_front</sprite>
-      <sprite>sprites\CleaveUP</sprite>
-      <sprite>sprites\CleaveDOWN</sprite>
-      <sprite>sprites\CleaveLEFT</sprite>
-      <sprite>sprites\CleaveRIGHT</sprite>
+      <sprite>sprites\spr_CleaveUP</sprite>
+      <sprite>sprites\spr_CleaveDOWN</sprite>
+      <sprite>sprites\spr_CleaveLEFT</sprite>
+      <sprite>sprites\spr_CleaveRIGHT</sprite>
+    </sprites>
+    <sprites name="Spell">
+      <sprite>sprites\spr_nova</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">

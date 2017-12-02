@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>47</bbox_right>
-  <bbox_top>2</bbox_top>
-  <bbox_bottom>35</bbox_bottom>
+  <bbox_top>11</bbox_top>
+  <bbox_bottom>43</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,8 +20,8 @@
   <width>48</width>
   <height>48</height>
   <frames>
-    <frame index="0">images\CleaveDOWN_0.png</frame>
-    <frame index="1">images\CleaveDOWN_1.png</frame>
-    <frame index="2">images\CleaveDOWN_2.png</frame>
+    <frame index="0">images\spr_CleaveUP_0.png</frame>
+    <frame index="1">images\spr_CleaveUP_1.png</frame>
+    <frame index="2">images\spr_CleaveUP_2.png</frame>
   </frames>
 </sprite>
