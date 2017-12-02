@@ -148,8 +148,8 @@ if right map_offset_x-=0.1;
           <argument>
             <kind>1</kind>
             <string>///Pseudo Player View Pos
-x_map = obj_player_parent.x - (view_wview[0]/2)-4;
-y_map = obj_player_parent.y - (view_hview[0]/2);
+x_map = obj_player.x - (view_wview[0]/2)-4;
+y_map = obj_player.y - (view_hview[0]/2);
 </string>
           </argument>
         </arguments>
@@ -195,8 +195,8 @@ y_map = obj_player_parent.y - (view_hview[0]/2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_pos_x = obj_player_parent.x div CELL_WIDTH; 
-player_pos_y = obj_player_parent.y div CELL_HEIGHT;
+            <string>player_pos_x = obj_player.x div CELL_WIDTH; 
+player_pos_y = obj_player.y div CELL_HEIGHT;
 
 //set tiles in view to visible
 var i_init = max(0,view_xview[0] div CELL_WIDTH);

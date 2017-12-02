@@ -15,6 +15,13 @@
     <sprite>sprites\spr_enemy_1_hitbox</sprite>
     <sprite>sprites\spr_vase</sprite>
     <sprite>sprites\spr_warp</sprite>
+    <sprites name="Minimap">
+      <sprite>sprites\spr_wall_map</sprite>
+      <sprite>sprites\spr_player_map</sprite>
+      <sprite>sprites\spr_void_map</sprite>
+      <sprite>sprites\spr_border_map</sprite>
+      <sprite>sprites\spr_floor_map</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_void</background>
