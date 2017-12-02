@@ -401,7 +401,8 @@ for(var i=1;i&lt;grid_width-1;i++)
 }
 */
 
-//Vases 
+//Vases
+ /*
 for(var i=1;i&lt;grid_width-1;i++)
 {
     for(var j=1;j&lt;grid_height-1;j++)
@@ -471,6 +472,7 @@ for(var i=1;i&lt;grid_width-1;i++)
         }
     }
 }
+*/
 //destroy not needed ds
 for(var i=0;i&lt;ds_list_size(c);i++)
 {
