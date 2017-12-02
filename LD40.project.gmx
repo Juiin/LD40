@@ -23,7 +23,12 @@
       <sprite>sprites\spr_floor_map</sprite>
     </sprites>
     <sprite>sprites\TheHero</sprite>
-    <sprite>sprites\sprite15</sprite>
+    <sprites name="Cleave">
+      <sprite>sprites\CleaveUP</sprite>
+      <sprite>sprites\CleaveDOWN</sprite>
+      <sprite>sprites\CleaveLEFT</sprite>
+      <sprite>sprites\CleaveRIGHT</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_void</background>
