@@ -133,6 +133,7 @@
     <object>objects\obj_floaty_damage</object>
     <object>objects\obj_enemy_1</object>
     <object>objects\obj_enemy_dead</object>
+    <object>objects\obj_bars</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
