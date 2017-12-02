@@ -117,7 +117,7 @@
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_one</room>
-    <room>rooms\room2</room>
+    <room>rooms\rm_generated</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
