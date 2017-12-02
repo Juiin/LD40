@@ -22,6 +22,8 @@
       <sprite>sprites\spr_border_map</sprite>
       <sprite>sprites\spr_floor_map</sprite>
     </sprites>
+    <sprite>sprites\TheHero</sprite>
+    <sprite>sprites\sprite15</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_void</background>
