@@ -22,8 +22,11 @@
       <sprite>sprites\spr_border_map</sprite>
       <sprite>sprites\spr_floor_map</sprite>
     </sprites>
-    <sprite>sprites\TheHero</sprite>
+    <sprite>sprites\spr_hero_back</sprite>
     <sprite>sprites\sprite15</sprite>
+    <sprite>sprites\spr_hero_front</sprite>
+    <sprite>sprites\spr_hero_left</sprite>
+    <sprite>sprites\spr_hero_right</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_void</background>

@@ -7,9 +7,9 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>4</bbox_left>
-  <bbox_right>41</bbox_right>
-  <bbox_top>3</bbox_top>
+  <bbox_left>5</bbox_left>
+  <bbox_right>39</bbox_right>
+  <bbox_top>8</bbox_top>
   <bbox_bottom>61</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -20,13 +20,7 @@
   <width>46</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\TheHero_0.png</frame>
-    <frame index="1">images\TheHero_1.png</frame>
-    <frame index="2">images\TheHero_2.png</frame>
-    <frame index="3">images\TheHero_3.png</frame>
-    <frame index="4">images\TheHero_4.png</frame>
-    <frame index="5">images\TheHero_5.png</frame>
-    <frame index="6">images\TheHero_6.png</frame>
-    <frame index="7">images\TheHero_7.png</frame>
+    <frame index="0">images\spr_hero_right_0.png</frame>
+    <frame index="1">images\spr_hero_right_1.png</frame>
   </frames>
 </sprite>
